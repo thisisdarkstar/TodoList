@@ -1,0 +1,271 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: darkturquoise;
+    /* cursor: none; */
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    z-index: 12;
+    left: 0;
+    top: 0;
+    mix-blend-mode: difference;
+    /* overflow: hidden; */
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* cursor: none; */
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+    margin: 1rem;
+    user-select: none;
+
+}
+
+.heading img {
+    height: 50px !important;
+    border-top-right-radius: 40%;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    margin: 0 1rem;
+    filter: brightness(0.9);
+}
+
+.add-task {
+    text-align: center;
+    margin: 1rem 0 1.5rem 0;
+    width: 100%;
+}
+
+.add-task h2 {
+    margin: 0.5rem;
+    background: lightblue;
+    margin: 1rem auto;
+    width: 25%;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.items input:nth-child(1) {
+    padding: .6rem 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid;
+    width: 30%;
+    background: #ddd6d6;
+}
+
+.items input:nth-child(2) {
+    padding: .3rem;
+    border-radius: 0.3rem;
+    border: 1px solid;
+    background: #ddd6d6;
+    cursor: text;
+}
+
+#edit {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icons:hover {
+    filter: brightness(0.9);
+    transform: scale(0.9);
+}
+
+.icons {
+    width: 40px;
+    cursor: pointer;
+    background: #000;
+    border-radius: 50%;
+    outline: #000;
+}
+
+.tasks {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    padding: 1rem;
+}
+
+.task-list,
+.completed-tasks {
+    width: 50%;
+}
+
+.task-list h2,
+.completed-tasks h2 {
+    background: lightblue;
+    margin: auto;
+    width: 45%;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    display: none;
+}
+
+.task-list {
+    border-right: 2px solid;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+    margin: 1rem;
+    background: lightgray;
+    border-radius: 0.3rem;
+    padding: 0.4rem;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltiptext {
+    display: none;
+    background: #000;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    position: absolute;
+    color: white;
+    top: -2rem;
+
+}
+
+.tooltip:hover .tooltiptext {
+    display: block;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 4vh;
+    background: black;
+    width: 100%;
+    user-select: none;
+}
+
+.footer p {
+    text-align: center;
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+
+    .heading>h1:nth-child(1) {
+        font-size: 2.5rem;
+    }
+
+    .heading img {
+        height: 55px !important;
+    }
+
+    .add-task h2 {
+        width: 85%;
+    }
+
+    .icons {
+        width: 41px;
+    }
+
+    .items input:nth-child(1) {
+        width: 67%;
+    }
+
+    .tasks {
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .task-list,
+    .completed-tasks {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .task-list h2,
+    .completed-tasks h2 {
+        width: 70%;
+    }
+
+    .task-list {
+        padding: 1rem 0;
+        border: none;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .add-task h2 {
+        width: 60%;
+    }
+
+    .items input:nth-child(1) {
+        width: 50%;
+    }
+
+    .completed-tasks {
+        padding: 1rem 0;
+    }
+
+    .task-list h2,
+    .completed-tasks h2 {
+        width: 75%;
+    }
+
+    .task-list {
+        padding: 1rem 0;
+    }
+
+}

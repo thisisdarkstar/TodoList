@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- <div id="cursor"></div> -->
+    <div class="main">
+        <div class="heading">
+            <h1>Todo List</h1>
+            <img src="assets/todo-list.gif" alt="icon">
+        </div>
+        <div class="add-task">
+            <h2>Add Task <img onclick="reset_tasks()" class="icons" src="assets/reset.png" alt=""></h2>
+            <div class="items">
+                <input id="the-task" type="text" placeholder="Enter Task" required>
+                <div class="tooltip">
+                    <img onclick="add_task()" class="icons add" src="assets/add.png" alt="Add-Task"><span
+                        class="tooltiptext">Add</span>
+                </div>
+                <div class="tooltip">
+                    <img id="edit" class="icons" src="assets/edit.png" alt="Add-Task"><span
+                        class="tooltiptext">Edit</span>
+                </div>
+            </div>
+        </div>
+        <div class="tasks">
+            <div class="task-list">
+                <h2 class="pending">Pending Tasks</h2>
+            </div>
+            <div class="completed-tasks">
+                <h2 class="completed">Completed Tasks</h2>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright&copy; By Dummy69</p>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
